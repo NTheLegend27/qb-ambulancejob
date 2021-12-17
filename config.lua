@@ -5,59 +5,75 @@ Config.WipeInventoryOnRespawn = true
 
 Config.Locations = {
     ["checking"] = {
-	    [1] = vector3(308.19, -595.35, 43.29),
-	    [2] = vector3(-254.54, 6331.78, 32.43), -- paleto
+	    [1] = vector3(307.70, -595.31, 43.29), -- Pillbox Upstairs
+	    [2] = vector3(351.02, -587.63, 28.8), -- Pillbox Downstairs
+	    [3] = vector3(-265.69, 6315.83, 32.44), -- paleto
+	    [4] = vector3(1828.29, 3685.45, 34.27), -- Sandy
     },
     ["duty"] = {
-        [1] = vector3(311.18, -599.25, 43.29),
-        [2] = vector3(-254.88, 6324.5, 32.58),
+        [1] = vector3(309.67, -602.69, 43.28), -- Pillbox
+        [2] = vector3(-262.86, 6311.93, 32.44), -- Paleto
+        [3] = vector3(1830.81, 3689.28, 34.27), -- Sandy
     },
     ["vehicle"] = {
-        [1] = vector4(294.578, -574.761, 43.179, 35.792),
-        [2] = vector4(-234.28, 6329.16, 32.15, 222.5),
+        [1] = vector4(334.86, -572.62, 28.8, 338.28), -- Pillbox Right
+        [2] = vector4(327.43, -570.38, 28.8, 333.27), -- Pillbox Left
+        [3] = vector4(-244.35, 6338.96, 32.41, 229.19), -- Paleto
+        [4] = vector4(1805.75, 3681.32, 34.22, 297.29), -- Sandy
     },
     ["helicopter"] = {
-        [1] = vector4(351.58, -587.45, 74.16, 160.5),
-        [2] = vector4(-475.43, 5988.353, 31.716, 31.34),
+        [1] = vector4(351.58, -587.45, 74.16, 160.5), -- Pillbox
+        [2] = vector4(-254.94, 6313.47, 37.62, 248.1), -- Paleto
+        [3] = vector4(1831.43, 3688.51, 38.63, 30.7), -- Sandy
     },
     ["armory"] = {
-        [1] = vector3(309.93, -602.94, 43.29),
-        [2] = vector3(-245.13, 6315.71, 32.82),
+        [1] = vector3(306.81, -601.62, 43.28), -- Pillbox
+        [2] = vector3(-252.65, 6327.58, 32.43), -- Paleto
+        [3] = vector3(1823.82, 3686.98, 34.27), -- Sandy
     },
     ["roof"] = {
-        [1] = vector4(338.5, -583.85, 74.16, 245.5),
+        [1] = vector4(338.5, -583.85, 74.16, 245.5), -- Pillbox
+        [2] = vector3(1815.83, 3678.96, 38.11), -- Sandy
+        [3] = vector3(-254.51, 6321.08, 37.62), -- Paleto
     },
     ["main"] = {
-        [1] = vector3(298.44, -599.7, 43.29),
+        [1] = vector3(330.09, -601.18, 43.28), -- Pillbox
+        [2] = vector3(1816.05, 3678.73, 34.28), -- Sandy
+        [3] = vector3(-269.4, 6320.51, 32.44), -- Paleto
     },
     ["beds"] = {
-        [1] = {coords = vector4(353.1, -584.6, 43.11, 152.08), taken = false, model = 1631638868},
-        [2] = {coords = vector4(356.79, -585.86, 43.11, 152.08), taken = false, model = 1631638868},
-        [3] = {coords = vector4(354.12, -593.12, 43.1, 336.32), taken = false, model = 2117668672},
-        [4] = {coords = vector4(350.79, -591.8, 43.1, 336.32), taken = false, model = 2117668672},
-        [5] = {coords = vector4(346.99, -590.48, 43.1, 336.32), taken = false, model = 2117668672},
-        [6] = {coords = vector4(360.32, -587.19, 43.02, 152.08), taken = false, model = -1091386327},
-        [7] = {coords = vector4(349.82, -583.33, 43.02, 152.08), taken = false, model = -1091386327},
-        [8] = {coords = vector4(326.98, -576.17, 43.02, 152.08), taken = false, model = -1091386327},
+        -- Pillbox
+        [1] = {coords = vector4(322.67, -587.31, 43.0, 343.18), taken = false, model = 1631638868},
+        [2] = {coords = vector4(317.6, -585.46, 44.2, 343.18), taken = false, model = 1631638868},
+        [3] = {coords = vector4(314.51, -584.33, 44.2, 343.18), taken = false, model = 1631638868},
+        [4] = {coords = vector4(311.03, -583.13, 44.2, 343.18), taken = false, model = 1631638868},
+        [5] = {coords = vector4(307.86, -581.83, 44.2, 343.18), taken = false, model = 1631638868},
+        [6] = {coords = vector4(309.42, -577.31, 44.2, 157.40), taken = false, model = -1631638868},
+        [7] = {coords = vector4(313.87, -578.98, 44.2, 157.40), taken = false, model = -1631638868},
+        [8] = {coords = vector4(319.34, -580.82, 44.2, 157.40), taken = false, model = -1631638868},
 	--- paleto
-	    [9] = {coords = vector4(-252.43, 6312.25, 32.34, 313.48), taken = false, model = 2117668672},
-        [10] = {coords = vector4(-247.04, 6317.95, 32.34, 134.64), taken = false, model = 2117668672},
-        [11] = {coords = vector4(-255.98, 6315.67, 32.34, 313.91), taken = false, model = 2117668672},
+	    [9] = {coords = vector4(-260.12, 6320.55, 32.36, 129.71), taken = false, model = 2117668672},
+        [10] = {coords = vector4(-257.77, 6318.19, 32.36, 139.32), taken = false, model = 2117668672},
+        [11] = {coords = vector4(-255.46, 6325.19, 32.36, 230.54), taken = false, model = 2117668672},
+    --- Sandy
+        [12] = {coords = vector4(1826.43, 3676.8, 34.2, 210.79), taken = false, model = 1631638868},
+        [13] = {coords = vector4(1819.58, 3673.08, 34.2, 206.59), taken = false, model = 1631638868},
     },
     ["stations"] = {
-        [1] = {label = "Pillbox Hospital", coords = vector4(304.27, -600.33, 43.28, 272.249)}
+        [1] = {label = "Pillbox Hospital", coords = vector4(304.27, -600.33, 43.28, 272.249)},
+        [2] = {label = "Sandy Shores Hospital", coords = vector4(1839.54, 3672.63, 34.28, 30.03)},
+        [3] = {label = "Paleto Hospital", coords = vector4(-247.6, 6332.59, 32.43, 232.9)},
     }
 }
 
 Config.AuthorizedVehicles = {
 	-- Grade 0
-	[0] = {
+    [0] = {
 		["ambulance"] = "Ambulance",
 	},
 	-- Grade 1
 	[1] = {
 		["ambulance"] = "Ambulance",
-
 	},
 	-- Grade 2
 	[2] = {
@@ -69,6 +85,18 @@ Config.AuthorizedVehicles = {
 	},
 	-- Grade 4
 	[4] = {
+		["ambulance"] = "Ambulance",
+	},
+    [5] = {
+		["ambulance"] = "Ambulance",
+    },
+	[6] = {
+		["ambulance"] = "Ambulance",
+	},
+	[7] = {
+		["ambulance"] = "Ambulance",
+	},
+    [8] = {
 		["ambulance"] = "Ambulance",
 	}
 }
@@ -130,7 +158,7 @@ Config.Items = {
     }
 }
 
-Config.BillCost = 2000
+Config.BillCost = 750
 Config.DeathTime = 300
 Config.CheckTime = 10
 
