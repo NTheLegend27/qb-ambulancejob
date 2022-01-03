@@ -54,6 +54,9 @@ function TakeOutVehicle(vehicleInfo)
         SetEntityHeading(veh, coords.w)
         exports['LegacyFuel']:SetFuel(veh, 100.0)
         TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
+        if Config.VehicleSettings[vehicleInfo] ~= nil then
+            QBCore.Shared.SetDefaultVehicleExtras(veh, Config.VehicleSettings[vehicleInfo].extras)
+        end
         TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
         SetVehicleEngineOn(veh, true, true)
     end, coords, true)
@@ -249,6 +252,34 @@ end)
 
 -- Threads
 
+-- Personal Stash
+CreateThread(function()
+    Wait(1000)
+    while true do
+        local sleep = 2000
+        if LocalPlayer.state.isLoggedIn and PlayerJob.name == "ambulance" then
+            local pos = GetEntityCoords(PlayerPedId())
+            for k, v in pairs(Config.Locations["stash"]) do
+                if #(pos - v) < 4.5 then
+                    if onDuty then
+                        sleep = 5
+                        if #(pos - v) < 1.5 then
+                            DrawText3D(v.x, v.y, v.z, "~g~E~w~ - Personal stash")
+                            if IsControlJustReleased(0, 38) then
+                                TriggerServerEvent("inventory:server:OpenInventory", "stash", "ambulancestash_"..QBCore.Functions.GetPlayerData().citizenid)
+                                TriggerEvent("inventory:client:SetCurrentStash", "ambulancestash_"..QBCore.Functions.GetPlayerData().citizenid)
+                            end
+                        elseif #(pos - v) < 2.5 then
+                            DrawText3D(v.x, v.y, v.z, "Personal stash")
+                        end
+                    end
+                end
+            end
+        end
+        Wait(sleep)
+    end
+end)
+
 CreateThread(function()
     while true do
         Wait(10)
@@ -271,7 +302,7 @@ end)
 CreateThread(function()
     while true do
         sleep = 1000
-        if LocalPlayer.state['isLoggedIn'] then
+        if LocalPlayer.state.isLoggedIn then
             local ped = PlayerPedId()
             local pos = GetEntityCoords(ped)
             if PlayerJob.name =="ambulance" then

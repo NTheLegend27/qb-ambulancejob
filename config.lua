@@ -41,6 +41,9 @@ Config.Locations = {
         [2] = vector3(1816.05, 3678.73, 34.28), -- Sandy
         [3] = vector3(-269.4, 6320.51, 32.44), -- Paleto
     },
+    ["stash"] = {
+        [1] = vector3(309.78, -596.6, 43.29),
+    },
     ["beds"] = {
         -- Pillbox
         [1] = {coords = vector4(322.67, -587.31, 43.0, 343.18), taken = false, model = 1631638868},
@@ -587,4 +590,39 @@ Config.Weapons = {
     [`WEAPON_EXHAUSTION`] = Config.WeaponClasses['SUFFOCATING'], -- Exhaust
     [`WEAPON_BZGAS`] = Config.WeaponClasses['SUFFOCATING'],
     [`WEAPON_SMOKEGRENADE`] = Config.WeaponClasses['SUFFOCATING'],
+}
+
+Config.VehicleSettings = {
+    ["car1"] = { -- Model name
+        ["extras"] = {
+            ["1"] = false, -- on/off
+            ["2"] = true,
+            ["3"] = true,
+            ["4"] = true,
+            ["5"] = true,
+            ["6"] = true,
+            ["7"] = true,
+            ["8"] = true,
+            ["9"] = true,
+            ["10"] = true,
+            ["11"] = true,
+            ["12"] = true,
+        }
+    },
+    ["car2"] = {
+        ["extras"] = {
+            ["1"] = false,
+            ["2"] = true,
+            ["3"] = true,
+            ["4"] = true,
+            ["5"] = true,
+            ["6"] = true,
+            ["7"] = true,
+            ["8"] = true,
+            ["9"] = true,
+            ["10"] = true,
+            ["11"] = true,
+            ["12"] = true,
+        }
+    }
 }
