@@ -1,6 +1,6 @@
 Config = {}
 
-Config.MinimalDoctors = 2
+Config.MinimalDoctors = 1
 Config.WipeInventoryOnRespawn = true
 
 Config.Locations = {
@@ -63,9 +63,9 @@ Config.Locations = {
         [13] = {coords = vector4(1819.58, 3673.08, 34.2, 206.59), taken = false, model = 1631638868},
     },
     ["stations"] = {
-        [1] = {label = "Pillbox Hospital", coords = vector4(304.27, -600.33, 43.28, 272.249)},
-        [2] = {label = "Sandy Shores Hospital", coords = vector4(1839.54, 3672.63, 34.28, 30.03)},
-        [3] = {label = "Paleto Hospital", coords = vector4(-247.6, 6332.59, 32.43, 232.9)},
+        [1] = {label = Lang:t('info.pb_hospital'), coords = vector4(304.27, -600.33, 43.28, 272.249)},
+        [2] = {label = Lang:t('info.sd_hospital'), coords = vector4(1839.54, 3672.63, 34.28, 30.0)},
+        [3] = {label = Lang:t('info.pl_hospital'), coords = vector4(-247.6, 6332.59, 32.43, 232.9)},
     }
 }
 
@@ -107,7 +107,7 @@ Config.AuthorizedVehicles = {
 Config.Helicopter = "polmav"
 
 Config.Items = {
-    label = "Hospital safe",
+    label = Lang:t('info.safe'),
     slots = 30,
     items = {
         [1] = {
@@ -161,7 +161,7 @@ Config.Items = {
     }
 }
 
-Config.BillCost = 750
+Config.BillCost = 350
 Config.DeathTime = 300
 Config.CheckTime = 10
 
@@ -335,17 +335,17 @@ Config.StaggerAreas = {
 }
 
 Config.WoundStates = {
-    'irritated',
-    'quite painful',
-    'painful',
-    'really painful',
+    Lang:t('states.irritated'),
+    Lang:t('states.quite_painful'),
+    Lang:t('states.painful'),
+    Lang:t('states.really_painful'),
 }
 
 Config.BleedingStates = {
-    [1] = {label = 'bleeding a little bit..', damage = 10, chance = 50},
-    [2] = {label = 'bleeding..', damage = 15, chance = 65},
-    [3] = {label = 'bleeding a lot..', damage = 20, chance = 65},
-    [4] = {label = 'bleeding very much..', damage = 25, chance = 75},
+    [1] = {label = Lang:t('states.little_bleed'), damage = 10, chance = 50},
+    [2] = {label = Lang:t('states.bleed'), damage = 15, chance = 65},
+    [3] = {label = Lang:t('states.lot_bleed'), damage = 20, chance = 65},
+    [4] = {label = Lang:t('states.big_bleed'), damage = 25, chance = 75},
 }
 
 Config.MovementRate = {
@@ -475,6 +475,7 @@ Config.BoneIndexes = {
 
 Config.Weapons = {
     [`WEAPON_STUNGUN`] = Config.WeaponClasses['NONE'],
+    [`WEAPON_STUNGUN_MP`] = Config.WeaponClasses['NONE'],
     --[[ Small Caliber ]]--
     [`WEAPON_PISTOL`] = Config.WeaponClasses['SMALL_CALIBER'],
     [`WEAPON_COMBATPISTOL`] = Config.WeaponClasses['SMALL_CALIBER'],
@@ -521,6 +522,7 @@ Config.Weapons = {
     [`WEAPON_MINIGUN`] = Config.WeaponClasses['HIGH_CALIBER'],
     [`WEAPON_MUSKET`] = Config.WeaponClasses['HIGH_CALIBER'],
     [`WEAPON_RAILGUN`] = Config.WeaponClasses['HIGH_CALIBER'],
+    [`WEAPON_HEAVYRIFLE`] = Config.WeaponClasses['HIGH_CALIBER'],
 
     --[[ Shotguns ]]--
     [`WEAPON_ASSAULTSHOTGUN`] = Config.WeaponClasses['SHOTGUN'],
@@ -572,6 +574,7 @@ Config.Weapons = {
     [`WEAPON_RPG`] = Config.WeaponClasses['EXPLOSIVE'],
     [`WEAPON_STICKYBOMB`] = Config.WeaponClasses['EXPLOSIVE'],
     [`WEAPON_HELI_CRASH`] = Config.WeaponClasses['EXPLOSIVE'],
+    [`WEAPON_EMPLAUNCHER`] = Config.WeaponClasses['EXPLOSIVE'],
 
     --[[ Other ]]--
     [`WEAPON_FALL`] = Config.WeaponClasses['OTHER'], -- Fall

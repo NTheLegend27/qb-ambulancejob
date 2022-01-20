@@ -4,7 +4,11 @@ game 'gta5'
 description 'QB-AmbulanceJob'
 version '1.0.0'
 
-shared_script 'config.lua'
+shared_scripts {
+	'@qb-core/shared/locale.lua',
+	'locales/en.lua',
+	'config.lua'
+}
 
 client_scripts {
 	'client/main.lua',
@@ -14,6 +18,9 @@ client_scripts {
 	'client/dead.lua',
 }
 
-server_script 'server/main.lua'
+server_scripts {
+    '@oxmysql/lib/MySQL.lua',
+    'server/main.lua'
+}
 
 lua54 'yes'
