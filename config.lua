@@ -8,7 +8,7 @@ Config.Locations = {
 	    [1] = vector3(307.70, -595.31, 43.29), -- Pillbox Upstairs
 	    [2] = vector3(351.02, -587.63, 28.8), -- Pillbox Downstairs
 	    [3] = vector3(-265.69, 6315.83, 32.44), -- paleto
-	    [4] = vector3(1828.29, 3685.45, 34.27), -- Sandy
+	    [4] = vector3(1828.29, 3685.45, 34.27), -- Sandy test
     },
     ["duty"] = {
         [1] = vector3(309.67, -602.69, 43.28), -- Pillbox
